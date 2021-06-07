@@ -7,15 +7,12 @@ import CalcButton from './components/CalcButton';
 
 import reducer, { initialState } from './reducers';
 
-import { addOne, applyNumber, changeOperation, clearDisplay, saveToMemory, addMemoryToTotal, clearMemory } from './actions';
+import { applyNumber, changeOperation, clearDisplay, saveToMemory, addMemoryToTotal, clearMemory } from './actions';
 
 function App() {
 
   const [ state, dispatch ] = useReducer(reducer, initialState);
   
-  const handleAddOne = () => {
-    dispatch(addOne());
-  }
   const handleApplyNumber = (number) => {
     dispatch(applyNumber(number));
   }
